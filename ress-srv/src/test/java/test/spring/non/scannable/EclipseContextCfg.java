@@ -9,21 +9,20 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 
 @Configuration
-@ImportResource({ //
-        "file:src/main/assembly/cfg/beans.xml", //
-        "classpath:eclipse-beans.xml" //
+@ImportResource({
+        "file:src/main/assembly/cfg/beans.xml"
 })
-@ComponentScan(basePackages = { "com.tnf.cas" })
+@ComponentScan(basePackages = {"com.tnf.cas"})
 public class EclipseContextCfg {
 
     @Bean
     public PropertyPlaceholderConfigurer getCfg() {
         PropertyPlaceholderConfigurer cfg = new PropertyPlaceholderConfigurer();
-        FileSystemResource location1 = new FileSystemResource(//
-                "src/main/assembly/cfg/cfg-cas.properties.template"//
+        FileSystemResource location1 = new FileSystemResource(
+                "src/main/assembly/cfg/cfg-cas.properties.template"
         );
-        ClassPathResource location2 = new ClassPathResource(//
-                "eclipse_cassandra_connection.properties"//
+        ClassPathResource location2 = new ClassPathResource(
+                "eclipse_cassandra_connection.properties"
         );
         cfg.setLocations(location1, location2);
         cfg.setIgnoreUnresolvablePlaceholders(true);

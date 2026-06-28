@@ -76,7 +76,6 @@ public class WebServicesTest implements WebServerConstants {
         assertNotNull(mWebServer);
         mWebServer.setRandomPorts(true);
         mWebServer.setBeans(ContextCfg.class.getName());
-        // "classpath:test-beans.xml file:src/main/assembly/cfg/beans.xml"
         mWebServer.init();
         mBeans = mWebServer.getAppCtx();
         if (null == mBeans) {

@@ -7,20 +7,18 @@ import java.util.Map.Entry;
 
 import org.junit.Test;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import test.spring.non.scannable.TestMockBeansConfig;
 
 public class TestContextCreationForTests {
 
-	private ClassPathXmlApplicationContext mApp;
+	private AnnotationConfigApplicationContext mApp;
 
 	@Test
 	public void test() {
 
-		mApp = new ClassPathXmlApplicationContext();
-		mApp.setConfigLocations( //
-				"classpath:test-beans.xml" //
-		);
-		mApp.refresh();
+		mApp = new AnnotationConfigApplicationContext(TestMockBeansConfig.class);
 
 		for (String name : mApp.getBeanDefinitionNames()) {
 			System.out.println(name);
