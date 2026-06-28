@@ -1,4 +1,4 @@
-package com.tnf.cas.common.properties;
+package sco.common.properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

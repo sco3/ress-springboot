@@ -14,11 +14,11 @@ import com.datastax.driver.core.Cluster;
 import com.tnf.bis.common.db.CassandraDatasourceFactory;
 
 import com.tnf.bis.common.util.BisPropertiesHelper;
-import com.tnf.cas.common.properties.Dt;
-import com.tnf.cas.common.properties.Sgm;
 import com.tnf.cas.web.WebServerConstants;
 import com.tnf.cas.webserver.WebServer;
 
+import sco.common.properties.Dt;
+import sco.common.properties.Sgm;
 import sco.common.util.CasPropertiesHelper;
 
 public class CasWebDaemon implements WebServerConstants {

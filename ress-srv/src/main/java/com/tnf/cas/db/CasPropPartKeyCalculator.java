@@ -1,7 +1,7 @@
 package com.tnf.cas.db;
 
-import com.tnf.cas.common.properties.Dt;
-import com.tnf.cas.common.properties.Sgm;
+import sco.common.properties.Dt;
+import sco.common.properties.Sgm;
 
 public class CasPropPartKeyCalculator implements PartKeyCalculator {
 

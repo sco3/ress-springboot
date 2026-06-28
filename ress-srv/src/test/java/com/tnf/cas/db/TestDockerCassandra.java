@@ -2,14 +2,14 @@ package com.tnf.cas.db;
 
 import static com.datastax.driver.core.querybuilder.QueryBuilder.eq;
 import static com.datastax.driver.core.querybuilder.QueryBuilder.in;
-import static com.tnf.cas.common.properties.Dt.getDt;
-import static com.tnf.cas.common.properties.Sgm.getSgm;
 import static java.lang.String.format;
 import static java.lang.System.out;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static sco.common.properties.Dt.getDt;
+import static sco.common.properties.Sgm.getSgm;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -55,12 +55,11 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
-
-import com.tnf.cas.common.properties.Dt;
-import com.tnf.cas.common.properties.Sgm;
 import com.tnf.cas.provider.BadParameters;
 
 import sco.common.db.BlobberRegistry;
+import sco.common.properties.Dt;
+import sco.common.properties.Sgm;
 
 import org.testcontainers.containers.CassandraContainer;
 

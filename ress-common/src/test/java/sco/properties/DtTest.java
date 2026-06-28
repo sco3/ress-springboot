@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.tnf.cas.common.properties.Dt;
+import sco.common.properties.Dt;
 
 public class DtTest {
     @Test

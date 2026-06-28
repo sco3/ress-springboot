@@ -1,4 +1,4 @@
-package com.tnf.cas.common.properties;
+package sco.common.properties;
 
 import java.util.Map;
 import java.util.StringJoiner;
