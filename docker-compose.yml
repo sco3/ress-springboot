@@ -9,6 +9,7 @@ services:
       - CASSANDRA_CLUSTER_NAME=TestCluster
     volumes:
       - ./docker/init.cql:/init.cql
+      - ./docker/ress-data.cql:/ress-data.cql
       - ./docker/cassandra-entrypoint.sh:/custom-entrypoint.sh
     entrypoint: ["/custom-entrypoint.sh"]
     healthcheck:

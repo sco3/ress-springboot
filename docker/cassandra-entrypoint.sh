@@ -21,5 +21,12 @@ if [ -f /init.cql ]; then
     echo "Init script completed."
 fi
 
+# Run data script if it exists
+if [ -f /ress-data.cql ]; then
+    echo "Running /ress-data.cql..."
+    cqlsh -f /ress-data.cql
+    echo "Data script completed."
+fi
+
 # Keep Cassandra in foreground
 wait $CASSANDRA_PID
