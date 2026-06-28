@@ -1,4 +1,4 @@
-package com.tnf.udf;
+package sco.partition;
 
 import java.util.zip.CRC32;
 

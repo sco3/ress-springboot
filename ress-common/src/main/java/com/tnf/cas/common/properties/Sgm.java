@@ -3,7 +3,7 @@ package com.tnf.cas.common.properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.tnf.udf.CommonBaseSgm;
+import sco.partition.CommonBaseSgm;
 
 public class Sgm extends CommonBaseSgm {
 

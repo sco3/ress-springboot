@@ -1,4 +1,4 @@
-package com.tnf.udf;
+package sco.partition;
 
 import java.text.ParseException;
 
