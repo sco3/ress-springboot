@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.db;
 
 import java.io.ByteArrayOutputStream;
 
