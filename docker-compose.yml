@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  cassandra:
+    image: cassandra:3.0.9
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=TestCluster
+    healthcheck:
+      test: ["CMD-SHELL", "cqlsh -e 'describe cluster' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  webserver:
+    image: ress-srv:latest
+    ports:
+      - "8009:8009"
+      - "8010:8010"
+    environment:
+      - cassandra.hosts.comma.separated=cassandra
+      - cassandra.port=9042
+      - cassandra.keyspace=tnf
+      - db.user=cassandra
+      - db.password=cassandra
+    depends_on:
+      cassandra:
+        condition: service_healthy
