@@ -1,4 +1,4 @@
-package com.tnf.cas.common;
+package sco.common;
 
 public interface CasCommonConstants {
     static final String FS = System.getProperty("file.separator");

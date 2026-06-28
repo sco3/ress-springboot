@@ -10,8 +10,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.tnf.cas.common.CasCommonConstants;
-
+import sco.common.CasCommonConstants;
 import sco.partition.CommonBaseShiftTime;
 
 public class Dt extends CommonBaseShiftTime {

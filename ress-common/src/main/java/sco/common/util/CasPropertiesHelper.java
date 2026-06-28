@@ -2,7 +2,7 @@ package sco.common.util;
 
 import java.util.Properties;
 
-import com.tnf.cas.common.CasCommonConstants;
+import sco.common.CasCommonConstants;
 
 public class CasPropertiesHelper implements CasCommonConstants {
 
