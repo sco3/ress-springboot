@@ -1,4 +1,4 @@
-package com.tnf.bis.common.timeinterval;
+package sco.common.partition;
 
 import java.util.StringJoiner;
 import java.util.regex.Pattern;

@@ -2,9 +2,6 @@ package sco.common.partition;
 
 import java.text.ParseException;
 
-import com.tnf.bis.common.timeinterval.BaseTimeGranularity;
-import com.tnf.bis.common.timeinterval.TimeInterval;
-
 import sco.common.util.TimeHelper;
 
 public class CommonBaseShiftTime {

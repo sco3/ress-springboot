@@ -1,4 +1,4 @@
-package com.tnf.bis.common.timeinterval;
+package sco.common.partition;
 
 import java.io.Serializable;
 

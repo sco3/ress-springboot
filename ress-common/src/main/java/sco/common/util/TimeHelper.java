@@ -8,8 +8,8 @@ import java.util.Locale;
 import java.util.TimeZone;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import com.tnf.bis.common.timeinterval.IntervalTimeUnit;
-import com.tnf.bis.common.timeinterval.TimeInterval;
+import sco.common.partition.IntervalTimeUnit;
+import sco.common.partition.TimeInterval;
 
 public class TimeHelper {
 
