@@ -59,6 +59,9 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.tnf.cas.common.properties.Dt;
 import com.tnf.cas.common.properties.Sgm;
 import com.tnf.cas.provider.BadParameters;
+
+import sco.common.db.BlobberRegistry;
+
 import org.testcontainers.containers.CassandraContainer;
 
 

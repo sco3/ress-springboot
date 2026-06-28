@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tnf.cas.db.Blobber;
 
 import de.undercouch.bson4jackson.BsonFactory;
 import de.undercouch.bson4jackson.BsonModule;
+import sco.common.db.Blobber;
 
 public class JacksonBsonBlobber implements Blobber {
     static Logger mTrace = LoggerFactory

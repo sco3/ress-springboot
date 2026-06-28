@@ -13,11 +13,11 @@ import org.junit.Test;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tnf.cas.db.Blobber;
-import com.tnf.cas.db.BlobberRegistry;
 
 import de.undercouch.bson4jackson.BsonFactory;
 import de.undercouch.bson4jackson.BsonModule;
+import sco.common.db.Blobber;
+import sco.common.db.BlobberRegistry;
 
 public class TestBson {
 

@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.common.db;
 
 import com.google.common.base.Charsets;
 

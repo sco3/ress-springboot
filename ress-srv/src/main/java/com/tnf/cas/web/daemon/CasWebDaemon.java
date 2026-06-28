@@ -1,6 +1,6 @@
 package com.tnf.cas.web.daemon;
 
-import static com.tnf.cas.db.BlobberRegistry.getBlobber;
+import static sco.common.db.BlobberRegistry.getBlobber;
 
 import java.net.URL;
 import java.nio.file.Path;

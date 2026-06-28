@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.common.db;
 
 import java.util.Iterator;
 import java.util.ServiceLoader;

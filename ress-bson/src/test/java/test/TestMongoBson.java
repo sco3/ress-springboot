@@ -10,8 +10,8 @@ import java.util.Iterator;
 import org.bson.RawBsonDocument;
 import org.junit.Test;
 
-import com.tnf.cas.db.Blobber;
-import com.tnf.cas.db.BlobberRegistry;
+import sco.common.db.Blobber;
+import sco.common.db.BlobberRegistry;
 
 public class TestMongoBson {
 

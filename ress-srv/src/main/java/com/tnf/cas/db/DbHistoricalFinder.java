@@ -47,6 +47,8 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.tnf.cas.provider.BadParameters;
 import com.tnf.cas.provider.NoDataFound;
 
+import sco.common.db.BlobberRegistry;
+
 /**
  * 
  * @author dz
