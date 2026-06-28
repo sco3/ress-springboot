@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 import org.junit.Test;
 
-public class TestInits {
+public class InitsTest {
 
     @Test
     public void test() {

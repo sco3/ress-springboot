@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import com.tnf.cas.provider.BadParameters;
 
-public class TestTimes {
+public class TimesTest {
 
     @Test
     public void test() {

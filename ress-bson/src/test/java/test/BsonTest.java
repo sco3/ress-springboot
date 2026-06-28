@@ -19,7 +19,7 @@ import de.undercouch.bson4jackson.BsonModule;
 import sco.common.db.Blobber;
 import sco.common.db.BlobberRegistry;
 
-public class TestBson {
+public class BsonTest {
 
 	@Test
 	public void test() throws Exception {

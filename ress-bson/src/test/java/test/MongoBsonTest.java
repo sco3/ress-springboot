@@ -13,7 +13,7 @@ import org.junit.Test;
 import sco.common.db.Blobber;
 import sco.common.db.BlobberRegistry;
 
-public class TestMongoBson {
+public class MongoBsonTest {
 
 	@Test
 	public void test() {

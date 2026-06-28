@@ -47,12 +47,12 @@ import com.tnf.cas.provider.SubProfileGeneratorRest;
 import com.tnf.cas.provider.SubProfilerRest;
 import com.tnf.cas.web.WebServerConstants;
 
-import test.spring.non.scannable.TestContextCfg;
+import test.spring.non.scannable.ContextCfg;
 import test.spring.non.scannable.WebTestCfg;
 
-public class TestWebServices implements WebServerConstants {
+public class WebServicesTest implements WebServerConstants {
 
-    private static final Logger mTrace = LoggerFactory.getLogger(TestWebServices.class);
+    private static final Logger mTrace = LoggerFactory.getLogger(WebServicesTest.class);
 
     private static WebServer mWebServer;
     private static int mPort;
@@ -75,7 +75,7 @@ public class TestWebServices implements WebServerConstants {
         mWebServer = ctx.getBean(WebServer.class);
         assertNotNull(mWebServer);
         mWebServer.setRandomPorts(true);
-        mWebServer.setBeans(TestContextCfg.class.getName());
+        mWebServer.setBeans(ContextCfg.class.getName());
         // "classpath:test-beans.xml file:src/main/assembly/cfg/beans.xml"
         mWebServer.init();
         mBeans = mWebServer.getAppCtx();
@@ -92,9 +92,7 @@ public class TestWebServices implements WebServerConstants {
 
     @AfterClass
     public static void cleanup() throws Exception {
-        org.mortbay.log.Log.getLog().setDebugEnabled(false);
-        mWebServer.getWebServer().stop();
-        mWebServer.getWebServer().destroy();
+        mWebServer.shutdown();
     }
 
     public String getUrl(String url) {

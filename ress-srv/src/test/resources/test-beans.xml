@@ -17,7 +17,7 @@
 	</bean>
 
 	<context:property-placeholder
-		location="file:src/main/assembly/cfg/cfg-cas.properties.template,classpath:embedded_cassandra_connection.properties,classpath:webroot.properties" />
+		location="classpath:embedded_cassandra_connection.properties,classpath:webroot.properties" />
 
 
 	<!-- <prop key="cfg.context.httpd.root.dir">target/test-classes</prop> -->

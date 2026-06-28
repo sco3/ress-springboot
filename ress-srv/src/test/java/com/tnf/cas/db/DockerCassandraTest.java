@@ -64,9 +64,9 @@ import sco.common.properties.Sgm;
 import org.testcontainers.containers.CassandraContainer;
 
 
-import test.spring.non.scannable.TestCassandraContextCfg;
+import test.spring.non.scannable.CassandraContextCfg;
 
-public class TestDockerCassandra {
+public class DockerCassandraTest {
 	private static AnnotationConfigWebApplicationContext mApp;
 	private static Cluster mCluster;
 	private static int mPort9042;
@@ -100,7 +100,7 @@ public class TestDockerCassandra {
 			DbSession.setDynamicPort(mPort9042);
 			mApp = new AnnotationConfigWebApplicationContext();
 			mApp.setConfigLocations(//
-					TestCassandraContextCfg.class.getName() //
+					CassandraContextCfg.class.getName() //
 			);
 			mApp.refresh();
 			DbSession db = mApp.getBean(DbSession.class);

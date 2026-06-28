@@ -12,7 +12,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class TestPartitionKeys {
+public class PartitionKeysTest {
 
     @Test
     public void test() {
@@ -42,7 +42,7 @@ public class TestPartitionKeys {
         );
 
         DbHistoricalFinder finder = new DbHistoricalFinder();
-        finder.setPartKeyCalculator(new TestCalc());
+        finder.setPartKeyCalculator(new CalcTest());
         Map<PartToken, Set<String>> p = finder.findPartitionKeys(//
                 "", timeIds, imsis//
         );

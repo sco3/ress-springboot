@@ -1,6 +1,6 @@
 package com.tnf.cas.db;
 
-public class TestCalc implements PartKeyCalculator {
+public class CalcTest implements PartKeyCalculator {
 
     @Override
     public String getDt(String timeId, String tableName) {

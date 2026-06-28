@@ -18,8 +18,7 @@ public class TestContextCreationForTests {
 
 		mApp = new ClassPathXmlApplicationContext();
 		mApp.setConfigLocations( //
-				"file:src/main/assembly/cfg/beans.xml" //
-				, "classpath:test-beans.xml" //
+				"classpath:test-beans.xml" //
 		);
 		mApp.refresh();
 

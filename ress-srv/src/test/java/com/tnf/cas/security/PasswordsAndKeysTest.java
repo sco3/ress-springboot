@@ -16,25 +16,23 @@ import org.apache.commons.codec.binary.Base64;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.datastax.driver.core.ConsistencyLevel;
 import com.tnf.cas.db.DummyHistFinder;
 import com.tnf.cas.db.HistoricalFinder;
 import com.tnf.cas.web.WebServerConstants;
 
-import test.spring.non.scannable.TestContextCfg;
+import test.spring.non.scannable.SecurityTestCfg;
 
-public class TestPasswordsAndKeys implements WebServerConstants {
+public class PasswordsAndKeysTest implements WebServerConstants {
 
-	private AnnotationConfigWebApplicationContext mApp;
+	private AnnotationConfigApplicationContext mApp;
 
 	@Before
 	public void setup() {
-
-		mApp = new AnnotationConfigWebApplicationContext();
-		mApp.setConfigLocations(TestContextCfg.class.getName());
-		// "file:src/main/assembly/cfg/beans.xml", "classpath:test-beans.xml"
+		mApp = new AnnotationConfigApplicationContext();
+		mApp.register(SecurityTestCfg.class);
 		mApp.refresh();
 	}
 

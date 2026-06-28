@@ -23,8 +23,8 @@ import com.tnf.cas.web.WebServerConstants;
 
 @Component
 @Path(WebServerConstants.REST_V1_PATH)
-public class TestRestResource implements WebServerConstants {
-    Logger mTrace = LoggerFactory.getLogger(TestRestResource.class);
+public class RestResourceTest implements WebServerConstants {
+    Logger mTrace = LoggerFactory.getLogger(RestResourceTest.class);
 
     private String mStr = "plain";
 

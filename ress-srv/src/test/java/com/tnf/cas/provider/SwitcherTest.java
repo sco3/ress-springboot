@@ -4,7 +4,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 import org.junit.Test;
 
-public class TestSwitcher {
+public class SwitcherTest {
 
     @Test
     public void test() throws Exception {

@@ -11,10 +11,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
-import org.mortbay.jetty.Connector;
-import org.mortbay.jetty.Server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.FactoryBean;
@@ -40,7 +36,6 @@ public class Informer implements FactoryBean<Informer> {
 
     static Informer mInst = null;
     private SimpleDateFormat mDf;
-    private Server mServer;
     private Session mSession;
     private Set<String> mTables = new HashSet<String>();
     private HashMap<String, Integer> mUsers = new HashMap<String, Integer>();
@@ -108,7 +103,6 @@ public class Informer implements FactoryBean<Informer> {
             }
         }
         for (int i = 0; i < HIST_STEPS; i++) {
-            // hCnt[i] = ;
             hist += "~" + Math.round(hCnt[i] * 100.0 / cnt);
         }
         long avg = cnt == 0 ? 0 : dur / cnt;
@@ -137,61 +131,17 @@ public class Informer implements FactoryBean<Informer> {
                         mTables.toString(), //
                         mUsers.toString() //
                 });
-
-        if (mServer != null) {
-            for (Connector conn : mServer.getConnectors()) {
-                mConstat.info("" //
-                        + "constat: {} port: {} connections: {} " //
-                        + "dur min: {} dur avg: {} dur max: {} dur total: {} " //
-                        + "open: {} open min: {} open max: {} "
-                        + "requests: {} req min: {} req avg: {} req max: {} :{}", //
-                        new Object[] { //
-                                dt, //
-                                conn.getPort(), //
-                                conn.getConnections(), //
-                                conn.getConnectionsDurationMin(), //
-                                conn.getConnectionsDurationAve(), //
-                                conn.getConnectionsDurationMax(), //
-                                conn.getConnectionsDurationTotal(), //
-                                conn.getConnectionsOpen(), //
-                                conn.getConnectionsOpenMin(), //
-                                conn.getConnectionsOpenMax(), //
-                                conn.getRequests(), //
-                                conn.getConnectionsRequestsMin(), //
-                                conn.getConnectionsRequestsAve(), //
-                                conn.getConnectionsRequestsMax(), //
-                                ")" });
-                conn.statsReset();
-            }
-        }
         return hist;
-
     }
 
     public void start() {
-
         Timer timer = new Timer("info", true);
-
         timer.scheduleAtFixedRate(new TimerTask() {
-
             @Override
             public void run() {
-                if (mServer != null) {
-                    mTrace.info(//
-                            "Server pool threads: {} idle: {} ", //
-                            new Object[] { //
-                                    mServer.getThreadPool().getThreads(), //
-                                    mServer.getThreadPool().getIdleThreads() //
-                    }//
-                    );
-                }
                 if (mSession != null) {
                     Session.State state = mSession.getState();
-                    ToStringBuilder
-                            .setDefaultStyle(ToStringStyle.MULTI_LINE_STYLE);
-                    String msg = "\n"
-                            + ToStringBuilder.reflectionToString(state) + "\n";
-
+                    String msg = "\n" + state + "\n";
                     mTrace.info("Cassandra session: {}", msg);
                 }
                 calc();
@@ -239,10 +189,6 @@ public class Informer implements FactoryBean<Informer> {
         return true;
     }
 
-    public void setServer(Server server) {
-        mServer = server;
-    }
-
     public Session getSession() {
         return mSession;
     }
@@ -251,5 +197,4 @@ public class Informer implements FactoryBean<Informer> {
     public void setSession(Session session) {
         mSession = session;
     }
-
 }

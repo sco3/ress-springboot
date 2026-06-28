@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class TestLexer {
+public class LexerTest {
 
     @Test
     public void test() {

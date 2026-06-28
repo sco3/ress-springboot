@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 
-public class TestBeanWrapper {
+public class BeanWrapperTest {
 
     static class Asdf {
         private String name;
