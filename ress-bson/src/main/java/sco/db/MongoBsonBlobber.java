@@ -1,7 +1,9 @@
-package com.tnf.cas.db;
+package sco.db;
 
 import org.bson.ByteBuf;
 import org.bson.RawBsonDocument;
+
+import com.tnf.cas.db.Blobber;
 
 public class MongoBsonBlobber implements Blobber {
     public byte[] save(String s) {
