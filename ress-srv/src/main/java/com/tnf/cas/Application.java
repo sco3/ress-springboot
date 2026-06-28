@@ -8,13 +8,10 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ImportResource;
-
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.tnf.cas.provider.StatusFilter;
 
 @SpringBootApplication
-@ImportResource("classpath:beans.xml")
 public class Application extends SpringBootServletInitializer {
 
     @Override
