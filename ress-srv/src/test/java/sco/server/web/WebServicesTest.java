@@ -150,7 +150,7 @@ public class WebServicesTest implements WebServerConstants {
         Cookie c = null;
         { // login
             HttpGet loginGet = new HttpGet(getUrl("http://localhost:%s/" + REST_V1_PATH
-                    + "/login?user=tnf&password=tnf")//
+                    + "/login?user=ress&password=ress")//
             );
 
             HttpResponse response = hc.execute(loginGet);
@@ -192,7 +192,7 @@ public class WebServicesTest implements WebServerConstants {
 
     private void login() throws Exception { // login
         HttpGet loginGet = new HttpGet(getUrl(
-                "http://localhost:%s/" + REST_V1_PATH + "/login?user=tnf&password=tnf")//
+                "http://localhost:%s/" + REST_V1_PATH + "/login?user=ress&password=ress")//
         );
         EntityUtils.consume(hc.execute(loginGet).getEntity());
         Cookie c = backend.getCookieStore().getCookies().get(0);

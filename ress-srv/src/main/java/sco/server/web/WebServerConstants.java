@@ -24,7 +24,7 @@ public interface WebServerConstants {
 
     static final String REST_TOKEN_NAME = "token";
 
-    static final String REST_V1_PATH = "cci/api/v1";
+    static final String REST_V1_PATH = "ress/api/v1";
 
     static final String SUBSCRIBER = "/subscriber";
     static final String IMSI = "/imsi";
@@ -33,7 +33,7 @@ public interface WebServerConstants {
     static final String DEF = "/def";
 
     static final String PATH_TO_USER_CONFIG_DIR = Paths.get( //
-            "..", "cas-main-var", "cfg").toString();
+            "..", "ress-main-var", "cfg").toString();
 
     static final int MINUTE = 60 * 1000;
     static final String TOKEN_MINUTES_TO_LIVE = "token.minutes.to.live";

@@ -49,12 +49,12 @@ public class PasswordsAndKeysTest implements WebServerConstants {
 	public void testPasswordFile() {
 		PropsFileUserStorage storage = new PropsFileUserStorage();
 
-		assertTrue(storage.isValid("tnf", "tnf"));
-		assertTrue(storage.isValid("boss", "boss"));
+		assertTrue(storage.isValid("ress", "ress"));
+		assertTrue(storage.isValid("best", "best"));
 		assertTrue(storage.isValid("test", "test"));
 
-		assertFalse(storage.isValid("tnf", "tnf1"));
-		assertFalse(storage.isValid("boss", "boss1"));
+		assertFalse(storage.isValid("ress", "ress1"));
+		assertFalse(storage.isValid("best", "best1"));
 		assertFalse(storage.isValid("test", "test1"));
 
 	}
@@ -91,12 +91,12 @@ public class PasswordsAndKeysTest implements WebServerConstants {
 		{
 			long start = System.currentTimeMillis();
 			System.out.println(new Date());
-			String token = login.login("tnf", "tnf");
+			String token = login.login("ress", "ress");
 			System.out.println(token);
 			assertNotNull(token);
 			SecurityContext ctx = login.validate(token);
 			assertNotNull("Validation failed", ctx);
-			assertEquals("tnf", ctx.getUserPrincipal().getName());
+			assertEquals("ress", ctx.getUserPrincipal().getName());
 			assertTrue(ctx.isUserInRole(HRCC_ROLE));
 
 			String[] parts = token.split(Pattern.quote(":"));

@@ -320,11 +320,6 @@
         <version>${slf4j.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.tnf.postinstall</groupId>
-        <artifactId>postinstall-util</artifactId>
-        <version>1.0.3</version>
-      </dependency>
-      <dependency>
         <groupId>com.caucho</groupId>
         <artifactId>hessian</artifactId>
         <version>4.0.1</version>
