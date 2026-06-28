@@ -1,4 +1,4 @@
-package com.tnf.cas.web.daemon;
+package sco.daemon;
 
 import static sco.common.db.BlobberRegistry.getBlobber;
 
