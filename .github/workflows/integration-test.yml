@@ -29,12 +29,12 @@ jobs:
       - name: Build Docker image
         run: docker build -t ress-srv:latest .
 
-      - name: Start docker-compose stack
+      - name: Start docker compose stack
         run: |
-          docker-compose up -d
+          docker compose up -d
           echo "Waiting for Cassandra..."
           for i in $(seq 1 40); do
-            if docker-compose exec -T cassandra cqlsh -e "describe cluster" >/dev/null 2>&1; then
+            if docker compose exec -T cassandra cqlsh -e "describe cluster" >/dev/null 2>&1; then
               echo "Cassandra is ready"
               break
             fi
@@ -50,10 +50,10 @@ jobs:
         if: failure()
         run: |
           echo "=== Cassandra logs ==="
-          docker-compose logs cassandra | tail -100
+          docker compose logs cassandra | tail -100
           echo "=== Webserver logs ==="
-          docker-compose logs webserver | tail -100
+          docker compose logs webserver | tail -100
 
       - name: Tear down
         if: always()
-        run: docker-compose down -v --remove-orphans
+        run: docker compose down -v --remove-orphans
