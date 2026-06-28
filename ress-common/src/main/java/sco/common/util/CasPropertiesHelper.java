@@ -1,4 +1,4 @@
-package com.tnf.cas.common.util;
+package sco.common.util;
 
 import java.util.Properties;
 

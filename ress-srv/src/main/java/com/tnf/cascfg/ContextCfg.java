@@ -8,7 +8,8 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.io.ClassPathResource;
 
 import com.tnf.bis.common.util.BisPropertiesHelper;
-import com.tnf.cas.common.util.CasPropertiesHelper;
+
+import sco.common.util.CasPropertiesHelper;
 
 @Configuration
 @ImportResource("classpath:beans.xml")

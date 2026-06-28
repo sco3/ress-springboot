@@ -19,8 +19,9 @@ import org.springframework.stereotype.Component;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.exceptions.NoHostAvailableException;
 import com.tnf.bis.common.db.CassandraDatasourceFactory;
-import com.tnf.cas.common.util.CasPropertiesHelper;
 import com.tnf.cas.web.WebServerConstants;
+
+import sco.common.util.CasPropertiesHelper;
 
 @Component
 public class DbSession //
