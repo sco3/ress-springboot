@@ -22,7 +22,7 @@
     <jetty.version>6.1.26</jetty.version>
     <cassandra.version>3.0.9</cassandra.version>
     <cassandra.driver.version>3.1.0</cassandra.driver.version>
-    <jackson.version>2.9.5</jackson.version>
+    <jackson.version>2.15.3</jackson.version>
     <spring.version>4.3.1.RELEASE</spring.version>
     <curator.verison>2.7.1</curator.verison>
     <netty.version>4.1.17.Final</netty.version>
@@ -235,6 +235,13 @@
               --add-opens java.base/java.util=ALL-UNNAMED
               --add-opens java.base/java.lang.invoke=ALL-UNNAMED
             </argLine>
+            <systemPropertyVariables>
+              <org.testcontainers.dockerclient.tcp.connection>unix:///var/run/docker.sock</org.testcontainers.dockerclient.tcp.connection>
+            </systemPropertyVariables>
+            <environmentVariables>
+              <DOCKER_HOST>unix:///var/run/docker.sock</DOCKER_HOST>
+              <DOCKER_API_VERSION>1.40</DOCKER_API_VERSION>
+            </environmentVariables>
           </configuration>
         </plugin>
       </plugins>
@@ -263,6 +270,16 @@
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
         <version>${jackson.version}</version>
       </dependency>
       <dependency>
