@@ -1,4 +1,4 @@
-package com.tnf.cas.security;
+package sco.security;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

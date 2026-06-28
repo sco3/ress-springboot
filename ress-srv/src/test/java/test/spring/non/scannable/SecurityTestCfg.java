@@ -6,11 +6,12 @@ import org.springframework.context.annotation.PropertySource;
 
 import com.tnf.cas.db.DummyHistFinder;
 import com.tnf.cas.db.HistoricalFinder;
-import com.tnf.cas.security.Authenticator;
-import com.tnf.cas.security.HmacAuthenticator;
-import com.tnf.cas.security.KeyProvider;
-import com.tnf.cas.security.PasswordFileLoginProvider;
-import com.tnf.cas.security.SingleKeyProvider;
+
+import sco.security.Authenticator;
+import sco.security.HmacAuthenticator;
+import sco.security.KeyProvider;
+import sco.security.PasswordFileLoginProvider;
+import sco.security.SingleKeyProvider;
 
 @Configuration
 @PropertySource("classpath:webroot.properties")

@@ -22,6 +22,10 @@ import com.datastax.driver.core.ConsistencyLevel;
 import com.tnf.cas.db.DummyHistFinder;
 import com.tnf.cas.db.HistoricalFinder;
 
+import sco.security.HmacAuthenticator;
+import sco.security.KeyProvider;
+import sco.security.PasswordFileLoginProvider;
+import sco.security.PropsFileUserStorage;
 import sco.web.WebServerConstants;
 import test.spring.non.scannable.SecurityTestCfg;
 

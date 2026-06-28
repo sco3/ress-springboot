@@ -16,8 +16,8 @@ import javax.xml.bind.DatatypeConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.tnf.cas.security.LoginProvider;
-import com.tnf.cas.security.PropsFileUserStorage;
+import sco.security.LoginProvider;
+import sco.security.PropsFileUserStorage;
 
 public class PropertiesDsaLoginProvider
         implements LoginProvider, WebServerConstants {

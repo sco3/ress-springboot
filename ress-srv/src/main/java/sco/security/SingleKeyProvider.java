@@ -1,4 +1,4 @@
-package com.tnf.cas.security;
+package sco.security;
 
 import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;

@@ -14,8 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import com.tnf.cas.security.LoginProvider;
-
+import sco.security.LoginProvider;
 import sco.web.WebServerConstants;
 
 @Component

@@ -1,4 +1,4 @@
-package com.tnf.cas.security;
+package sco.security;
 
 import javax.ws.rs.core.SecurityContext;
 
