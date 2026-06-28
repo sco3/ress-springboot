@@ -19,7 +19,8 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.tnf.cas.web.WebServerConstants;
+
+import sco.web.WebServerConstants;
 
 @Component
 @Path(WebServerConstants.REST_V1_PATH)

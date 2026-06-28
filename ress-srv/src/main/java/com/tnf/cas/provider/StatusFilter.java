@@ -8,7 +8,7 @@ import javax.ws.rs.container.ContainerResponseFilter;
 import javax.ws.rs.core.Response.StatusType;
 import javax.ws.rs.ext.Provider;
 
-import com.tnf.cas.web.WebServerConstants;
+import sco.web.WebServerConstants;
 
 @Provider
 public class StatusFilter

@@ -1,4 +1,4 @@
-package com.tnf.cas.web;
+package sco.web;
 
 import java.nio.file.Paths;
 

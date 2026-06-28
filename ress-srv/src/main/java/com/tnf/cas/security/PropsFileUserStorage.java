@@ -9,7 +9,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.tnf.cas.web.WebServerConstants;
+import sco.web.WebServerConstants;
 
 public class PropsFileUserStorage implements WebServerConstants {
 	Logger mTrace = LoggerFactory.getLogger(PropsFileUserStorage.class);

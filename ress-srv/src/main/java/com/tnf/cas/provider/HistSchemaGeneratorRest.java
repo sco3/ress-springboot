@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.tnf.cas.db.HistoricalSchemaGenerator;
-import com.tnf.cas.web.WebServerConstants;
+
+import sco.web.WebServerConstants;
 
 @Component("gethistdatadef")
 @Path(WebServerConstants.REST_V1_PATH)

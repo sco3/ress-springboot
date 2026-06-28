@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 
-import com.tnf.cas.web.WebServerConstants;
+import sco.web.WebServerConstants;
 
 public class SingleKeyProvider implements KeyProvider, WebServerConstants {
 	static Logger mTrace = LoggerFactory.getLogger(SingleKeyProvider.class);

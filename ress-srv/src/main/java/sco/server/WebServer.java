@@ -6,9 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.tnf.cas.web.WebServerConstants;
-
 import sco.cfg.ContextCfg;
+import sco.web.WebServerConstants;
 
 public class WebServer implements WebServerConstants {
 

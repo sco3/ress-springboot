@@ -14,7 +14,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
-import com.tnf.cas.web.WebServerConstants;
+import sco.web.WebServerConstants;
 
 @Component
 @Path(WebServerConstants.REST_V1_PATH)

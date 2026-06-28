@@ -5,7 +5,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.tnf.cas.web.WebServerConstants;
+import sco.web.WebServerConstants;
 
 @Component
 public class WebInitiator implements WebServerConstants, Cloneable {

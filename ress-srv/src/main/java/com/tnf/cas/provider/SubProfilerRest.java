@@ -13,7 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.tnf.cas.db.SubProfiler;
-import com.tnf.cas.web.WebServerConstants;
+
+import sco.web.WebServerConstants;
 
 @Component("getsubprofile")
 @Path(WebServerConstants.REST_V1_PATH)

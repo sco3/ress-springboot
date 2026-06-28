@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.tnf.cas.db.ProfileSchemaGenerator;
-import com.tnf.cas.web.WebServerConstants;
+
+import sco.web.WebServerConstants;
 
 @Component("getsubprofiledef")
 @Path(WebServerConstants.REST_V1_PATH)

@@ -13,13 +13,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.datastax.driver.core.Cluster;
-import com.tnf.cas.web.WebServerConstants;
 
 import sco.common.db.CassandraDatasourceFactory;
 import sco.common.properties.BisPropertiesHelper;
 import sco.common.properties.Dt;
 import sco.common.properties.Sgm;
 import sco.common.util.CasPropertiesHelper;
+import sco.web.WebServerConstants;
 
 @Component
 public class CasWebDaemon implements WebServerConstants, CommandLineRunner {

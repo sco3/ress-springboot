@@ -21,7 +21,8 @@ import org.springframework.stereotype.Component;
 import com.google.common.collect.Sets;
 import com.tnf.cas.db.HistoricalFinder;
 import com.tnf.cas.db.Switcher;
-import com.tnf.cas.web.WebServerConstants;
+
+import sco.web.WebServerConstants;
 
 @Component("gethistdata")
 @Path(WebServerConstants.REST_V1_PATH)
