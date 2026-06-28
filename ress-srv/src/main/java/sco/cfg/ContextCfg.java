@@ -1,4 +1,4 @@
-package com.tnf.cascfg;
+package sco.cfg;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
