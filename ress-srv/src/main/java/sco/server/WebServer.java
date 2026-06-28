@@ -1,4 +1,4 @@
-package com.tnf.cas.webserver;
+package sco.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

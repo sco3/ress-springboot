@@ -1,4 +1,4 @@
-package com.tnf.cas.webserver;
+package sco.server;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

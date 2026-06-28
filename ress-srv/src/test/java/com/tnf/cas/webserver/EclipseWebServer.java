@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import com.tnf.cas.web.WebServerConstants;
 
+import sco.server.WebServer;
 import test.spring.non.scannable.EclipseContextCfg;
 
 public class EclipseWebServer implements WebServerConstants {

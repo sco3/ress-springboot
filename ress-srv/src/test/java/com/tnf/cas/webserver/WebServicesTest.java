@@ -47,6 +47,7 @@ import com.tnf.cas.provider.SubProfileGeneratorRest;
 import com.tnf.cas.provider.SubProfilerRest;
 import com.tnf.cas.web.WebServerConstants;
 
+import sco.server.WebServer;
 import test.spring.non.scannable.ContextCfg;
 import test.spring.non.scannable.WebTestCfg;
 

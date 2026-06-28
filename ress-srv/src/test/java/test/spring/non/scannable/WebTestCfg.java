@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
 
-import com.tnf.cas.webserver.WebServer;
+import sco.server.WebServer;
 
 @Configuration
 public class WebTestCfg {
