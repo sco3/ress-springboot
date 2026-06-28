@@ -1,6 +1,6 @@
 package com.tnf.cas.db;
 
-import static sco.partition.CommonBaseShiftTime.shiftTime;
+import static sco.common.partition.CommonBaseShiftTime.shiftTime;
 
 import java.util.SortedSet;
 import java.util.TreeSet;

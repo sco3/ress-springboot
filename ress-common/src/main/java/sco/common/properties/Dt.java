@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import sco.common.CasCommonConstants;
-import sco.partition.CommonBaseShiftTime;
+import sco.common.partition.CommonBaseShiftTime;
 
 public class Dt extends CommonBaseShiftTime {
 

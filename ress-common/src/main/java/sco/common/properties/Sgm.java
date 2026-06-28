@@ -3,7 +3,7 @@ package sco.common.properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import sco.partition.CommonBaseSgm;
+import sco.common.partition.CommonBaseSgm;
 
 public class Sgm extends CommonBaseSgm {
 

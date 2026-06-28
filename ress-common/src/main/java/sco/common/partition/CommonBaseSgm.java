@@ -1,4 +1,4 @@
-package sco.partition;
+package sco.common.partition;
 
 import java.util.zip.CRC32;
 
