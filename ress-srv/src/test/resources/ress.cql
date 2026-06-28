@@ -1,7 +1,7 @@
 
-CREATE KEYSPACE if not exists tnf WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+CREATE KEYSPACE if not exists ress WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
 
-CREATE TABLE tnf.hrcc_subscriber (
+CREATE TABLE ress.hrcc_subscriber (
     imsi text PRIMARY KEY,
     account_number text,
     address_1 text,
@@ -55,7 +55,7 @@ CREATE TABLE tnf.hrcc_subscriber (
     AND read_repair_chance = 0.0
     AND speculative_retry = '99PERCENTILE';
 
-CREATE TABLE tnf.cas_properties (
+CREATE TABLE ress.cas_properties (
     name text PRIMARY KEY,
     value text
 ) WITH bloom_filter_fp_chance = 0.01
@@ -73,7 +73,7 @@ CREATE TABLE tnf.cas_properties (
     AND read_repair_chance = 0.0
     AND speculative_retry = '99PERCENTILE';
 
-CREATE TABLE tnf.hrcc_msisdn_imsi (
+CREATE TABLE ress.hrcc_msisdn_imsi (
     msisdn text,
     imsi text,
     PRIMARY KEY (msisdn, imsi)
@@ -93,7 +93,7 @@ CREATE TABLE tnf.hrcc_msisdn_imsi (
     AND read_repair_chance = 0.0
     AND speculative_retry = '99PERCENTILE';
 
-CREATE TABLE tnf.hrcc_historical_d_1 (
+CREATE TABLE ress.hrcc_historical_d_1 (
     dt text,
     sgm text,
     imsi text,
@@ -120,7 +120,7 @@ CREATE TABLE tnf.hrcc_historical_d_1 (
     AND read_repair_chance = 0.0
     AND speculative_retry = '99PERCENTILE';
 
-CREATE TABLE tnf.hrcc_historical_h_1 (
+CREATE TABLE ress.hrcc_historical_h_1 (
     dt text,
     sgm text,
     imsi text,
@@ -148,7 +148,7 @@ CREATE TABLE tnf.hrcc_historical_h_1 (
     AND speculative_retry = '99PERCENTILE';
     
     
-CREATE TABLE tnf.hrcc_historical_h_1i (
+CREATE TABLE ress.hrcc_historical_h_1i (
     dt text,
     sgm text,
     imsi text,
@@ -177,7 +177,7 @@ CREATE TABLE tnf.hrcc_historical_h_1i (
     
     
 
-CREATE TABLE tnf.flyway_info (
+CREATE TABLE ress.flyway_info (
     table_name text PRIMARY KEY,
     version text
 ) WITH bloom_filter_fp_chance = 0.01

@@ -1,4 +1,4 @@
-use tnf;
+use ress;
 
 insert into cas_properties (name, value) values ('hrcc.segments_by_imsi', '10');
 insert into cas_properties (name, value) values ('metric.definition.all', '{"schema":"yes"}');
@@ -21,17 +21,17 @@ insert into hrcc_msisdn_imsi ( msisdn, imsi) values ('3531', '0001');
 insert into hrcc_msisdn_imsi ( msisdn, imsi) values ('555', '555');
 
 
-insert into tnf.hrcc_subscriber json '{"imsi": "2","age": null}';
-insert into tnf.hrcc_subscriber json '{"imsi": "1","age": null}';
+insert into ress.hrcc_subscriber json '{"imsi": "2","age": null}';
+insert into ress.hrcc_subscriber json '{"imsi": "1","age": null}';
 
-insert into tnf.hrcc_subscriber json '{"imsi": "imsi1-1" }';
+insert into ress.hrcc_subscriber json '{"imsi": "imsi1-1" }';
 
-insert into tnf.hrcc_subscriber json '{"imsi": "imsi2-1"}';
-insert into tnf.hrcc_subscriber json '{"imsi": "imsi2-2"}';
+insert into ress.hrcc_subscriber json '{"imsi": "imsi2-1"}';
+insert into ress.hrcc_subscriber json '{"imsi": "imsi2-2"}';
 
-insert into tnf.hrcc_subscriber json '{"imsi": "imsi3-1"}';
-insert into tnf.hrcc_subscriber json '{"imsi": "imsi3-2"}';
-insert into tnf.hrcc_subscriber json '{"imsi": "imsi3-3"}';
+insert into ress.hrcc_subscriber json '{"imsi": "imsi3-1"}';
+insert into ress.hrcc_subscriber json '{"imsi": "imsi3-2"}';
+insert into ress.hrcc_subscriber json '{"imsi": "imsi3-3"}';
 
 insert into hrcc_historical_h_1 json '{"dt":"201608090400","sgm":"1","imsi":"3","timeid":"20160809040000","metric_ces_scores_distribution_for_video":null,"metric_count_of_pdp_create_attempts":"{\"m2\":222}","metric_count_of_successful_pdp_create":"{\"m1\":4310}","metric_mb_of_data_for_top_10_applicaton_used":null,"metric_number_of_mo_calls_attempts_for_top_12_cell_sites":null}';
 insert into hrcc_historical_h_1 json '{"dt":"201608090100","sgm":"3","imsi":"1","timeid":"20160809010000","metric_ces_scores_distribution_for_video":null,"metric_count_of_pdp_create_attempts":"{\"m2\":222}","metric_count_of_successful_pdp_create":"{\"m1\":111}","metric_mb_of_data_for_top_10_applicaton_used":null,"metric_number_of_mo_calls_attempts_for_top_12_cell_sites":null}';

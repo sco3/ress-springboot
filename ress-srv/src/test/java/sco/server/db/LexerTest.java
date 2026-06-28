@@ -12,7 +12,7 @@ public class LexerTest {
     @Test
     public void test() {
         List<String> lines = Arrays.asList(//
-                "CREATE KEYSPACE if not exists tnf WITH replication =" //
+                "CREATE KEYSPACE if not exists ress WITH replication =" //
                         + " {'class': 'SimpleStrategy', 'replication_factor': '1'} " //
                         + " AND durable_writes = true;", //
                 "create table asdf ( ", //

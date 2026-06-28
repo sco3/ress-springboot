@@ -15,27 +15,6 @@ import org.springframework.core.env.Environment;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import sco.common.util.CasPropertiesHelper;
-import sco.server.provider.BadParameters;
-import sco.server.provider.Compressor;
-import sco.server.provider.CorsFilter;
-import sco.server.provider.Delay;
-import sco.server.provider.DelayAsync;
-import sco.server.provider.DummyHistSchemaGenerator;
-import sco.server.provider.ExceptionHandler;
-import sco.server.provider.HistSchemaGeneratorRest;
-import sco.server.provider.ImsiRest;
-import sco.server.provider.Informer;
-import sco.server.provider.InformerRecord;
-import sco.server.provider.Login;
-import sco.server.provider.NoDataFound;
-import sco.server.provider.NotFound404;
-import sco.server.provider.RolesFeatureActivator;
-import sco.server.provider.Search;
-import sco.server.provider.StatusFilter;
-import sco.server.provider.SubProfilerRest;
-import sco.server.provider.SubProfileGeneratorRest;
-import sco.server.provider.SwitchSetter;
-import sco.server.provider.TokenValidator;
 
 @SpringBootApplication(scanBasePackages = "sco.server")
 public class Application extends SpringBootServletInitializer {
@@ -56,27 +35,7 @@ public class Application extends SpringBootServletInitializer {
     @Bean
     public ServletRegistrationBean jerseyServlet() {
         ResourceConfig config = new ResourceConfig();
-        config.register(BadParameters.class);
-        config.register(Compressor.class);
-        config.register(CorsFilter.class);
-        config.register(Delay.class);
-        config.register(DelayAsync.class);
-        config.register(DummyHistSchemaGenerator.class);
-        config.register(ExceptionHandler.class);
-        config.register(HistSchemaGeneratorRest.class);
-        config.register(ImsiRest.class);
-        config.register(Informer.class);
-        config.register(InformerRecord.class);
-        config.register(Login.class);
-        config.register(NoDataFound.class);
-        config.register(NotFound404.class);
-        config.register(RolesFeatureActivator.class);
-        config.register(Search.class);
-        config.register(StatusFilter.class);
-        config.register(SubProfilerRest.class);
-        config.register(SubProfileGeneratorRest.class);
-        config.register(SwitchSetter.class);
-        config.register(TokenValidator.class);
+        config.packages(true, "sco.server.provider");
         config.property(SerializationFeature.FAIL_ON_EMPTY_BEANS.toString(), false);
 
         ServletRegistrationBean registration = new ServletRegistrationBean(

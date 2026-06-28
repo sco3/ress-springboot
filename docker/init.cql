@@ -1,6 +1,6 @@
-CREATE KEYSPACE IF NOT EXISTS tnf WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'} AND durable_writes = true;
+CREATE KEYSPACE IF NOT EXISTS ress WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'} AND durable_writes = true;
 
-CREATE TABLE IF NOT EXISTS tnf.hrcc_subscriber (
+CREATE TABLE IF NOT EXISTS ress.hrcc_subscriber (
     imsi text PRIMARY KEY,
     account_number text,
     address_1 text,
@@ -41,18 +41,18 @@ CREATE TABLE IF NOT EXISTS tnf.hrcc_subscriber (
     voice_offering text
 );
 
-CREATE TABLE IF NOT EXISTS tnf.cas_properties (
+CREATE TABLE IF NOT EXISTS ress.cas_properties (
     name text PRIMARY KEY,
     value text
 );
 
-CREATE TABLE IF NOT EXISTS tnf.hrcc_msisdn_imsi (
+CREATE TABLE IF NOT EXISTS ress.hrcc_msisdn_imsi (
     msisdn text,
     imsi text,
     PRIMARY KEY (msisdn, imsi)
 ) WITH CLUSTERING ORDER BY (imsi ASC);
 
-CREATE TABLE IF NOT EXISTS tnf.hrcc_historical_d_1 (
+CREATE TABLE IF NOT EXISTS ress.hrcc_historical_d_1 (
     dt text,
     sgm text,
     imsi text,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS tnf.hrcc_historical_d_1 (
     PRIMARY KEY ((dt, sgm), imsi, timeid)
 ) WITH CLUSTERING ORDER BY (imsi ASC, timeid ASC);
 
-CREATE TABLE IF NOT EXISTS tnf.hrcc_historical_h_1 (
+CREATE TABLE IF NOT EXISTS ress.hrcc_historical_h_1 (
     dt text,
     sgm text,
     imsi text,
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS tnf.hrcc_historical_h_1 (
     PRIMARY KEY ((dt, sgm), imsi, timeid)
 ) WITH CLUSTERING ORDER BY (imsi ASC, timeid ASC);
 
-CREATE TABLE IF NOT EXISTS tnf.hrcc_historical_h_1i (
+CREATE TABLE IF NOT EXISTS ress.hrcc_historical_h_1i (
     dt text,
     sgm text,
     imsi text,
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS tnf.hrcc_historical_h_1i (
     PRIMARY KEY ((dt, sgm), imsi, timeid)
 ) WITH CLUSTERING ORDER BY (imsi ASC, timeid ASC);
 
-CREATE TABLE IF NOT EXISTS tnf.flyway_info (
+CREATE TABLE IF NOT EXISTS ress.flyway_info (
     table_name text PRIMARY KEY,
     version text
 );

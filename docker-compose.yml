@@ -26,7 +26,7 @@ services:
     environment:
       - cassandra.hosts.comma.separated=cassandra
       - cassandra.port=9042
-      - cassandra.keyspace=tnf
+      - cassandra.keyspace=ress
       - cassandra.user=cassandra
       - cassandra.password=cassandra
       - db.user=cassandra

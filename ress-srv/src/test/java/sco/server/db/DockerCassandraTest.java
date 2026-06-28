@@ -88,7 +88,8 @@ public class DockerCassandraTest {
 		try {
 			mCassandra = new CassandraContainer<>("cassandra:3.0.9");
 			mCassandra.start();
-		} catch (IllegalStateException e) {
+		} catch (Throwable e) {
+			System.out.println("Docker not available: " + e.getMessage());
 			Assume.assumeTrue(false);
 			return;
 		}
@@ -119,19 +120,19 @@ public class DockerCassandraTest {
 			new CqlLexer("cc.cql").process(mSession);
 			assertNotNull(mCluster.getMetadata().getKeyspace("cc"));
 
-			new CqlLexer("tnf.cql").process(mSession);
-			assertNotNull(mCluster.getMetadata().getKeyspace("tnf"));
+			new CqlLexer("ress.cql").process(mSession);
+			assertNotNull(mCluster.getMetadata().getKeyspace("ress"));
 
-			new CqlLexer("tnf-data.cql").process(mSession);
+			new CqlLexer("ress-data.cql").process(mSession);
 
 			assertNotNull(//
 					mCluster.getMetadata()//
-							.getKeyspace("tnf")//
+							.getKeyspace("ress")//
 							.getTable("hrcc_historical_d_1")//
 			);
 			assertNotNull(//
 					mCluster.getMetadata()//
-							.getKeyspace("tnf")//
+							.getKeyspace("ress")//
 							.getTable("hrcc_msisdn_imsi")//
 			);
 
@@ -213,12 +214,12 @@ public class DockerCassandraTest {
 			rs.forEach(c);
 		}
 		{
-			ResultSet rows = sess.execute("select json * from tnf.hrcc_subscriber");
+			ResultSet rows = sess.execute("select json * from ress.hrcc_subscriber");
 			for (Row row : rows) {
 				out.println(row.getString(0));
 			}
 		}
-		sess.execute("use tnf");
+		sess.execute("use ress");
 	}
 
 	@Test
@@ -326,7 +327,7 @@ public class DockerCassandraTest {
 		DbSubProfileShemaGenerator gen = mApp.getBean(//
 				DbSubProfileShemaGenerator.class//
 		);
-		gen.setKeySpace("tnf");
+		gen.setKeySpace("ress");
 		{
 			JsonNode o = gen.generateSchema();
 			System.out.println(o);

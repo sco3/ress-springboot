@@ -41,7 +41,7 @@ public class HmacAuthenticator implements WebServerConstants, Authenticator {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tnf.cas.security.Authenticator#generateSecret()
+	 * @see sco.ress.security.Authenticator#generateSecret()
 	 */
 	@Override
 	public byte[] generateSecret() {
@@ -59,7 +59,7 @@ public class HmacAuthenticator implements WebServerConstants, Authenticator {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tnf.cas.security.Authenticator#restoreKey(java.lang.String,
+	 * @see sco.ress.security.Authenticator#restoreKey(java.lang.String,
 	 * byte[])
 	 */
 	@Override
