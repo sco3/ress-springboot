@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.server.db;
 
 public class Crc16 {
     static final int[] mData = { //

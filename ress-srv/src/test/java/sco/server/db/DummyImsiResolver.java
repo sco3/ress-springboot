@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.server.db;
 
 import java.util.HashMap;
 import java.util.Set;

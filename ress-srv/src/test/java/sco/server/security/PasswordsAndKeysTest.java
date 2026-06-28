@@ -1,4 +1,4 @@
-package com.tnf.cas.security;
+package sco.server.security;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -19,8 +19,8 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.datastax.driver.core.ConsistencyLevel;
-import com.tnf.cas.db.DummyHistFinder;
 
+import sco.server.db.DummyHistFinder;
 import sco.server.db.HistoricalFinder;
 import sco.server.security.HmacAuthenticator;
 import sco.server.security.KeyProvider;

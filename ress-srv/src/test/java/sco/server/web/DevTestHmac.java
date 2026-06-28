@@ -1,4 +1,4 @@
-package com.tnf.cas.webserver;
+package sco.server.web;
 
 import static org.apache.commons.codec.binary.Base64.encodeBase64URLSafeString;
 

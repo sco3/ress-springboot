@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.server.db;
 
 import static com.datastax.driver.core.querybuilder.QueryBuilder.eq;
 import static com.datastax.driver.core.querybuilder.QueryBuilder.in;

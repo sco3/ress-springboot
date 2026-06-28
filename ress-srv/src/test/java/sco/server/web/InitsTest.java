@@ -1,4 +1,4 @@
-package com.tnf.cas.webserver;
+package sco.server.web;
 
 import static org.junit.Assert.*;
 import static sco.server.web.WebInitiator.scramble;

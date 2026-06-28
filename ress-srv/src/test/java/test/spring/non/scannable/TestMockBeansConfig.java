@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 
 import com.datastax.driver.core.Session;
-import com.tnf.cas.db.DummyHistFinder;
-import com.tnf.cas.db.DummyImsiResolver;
-import com.tnf.cas.db.DummySubProfileGenerator;
-import com.tnf.cas.db.DummySubProfiler;
 
+import sco.server.db.DummyHistFinder;
+import sco.server.db.DummyImsiResolver;
+import sco.server.db.DummySubProfileGenerator;
+import sco.server.db.DummySubProfiler;
 import sco.server.db.HistoricalFinder;
 import sco.server.db.HistoricalSchemaGenerator;
 import sco.server.db.ImsiResolver;

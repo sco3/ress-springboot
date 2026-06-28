@@ -1,4 +1,4 @@
-package com.tnf.cas.webserver;
+package sco.server.web;
 
 import java.io.ByteArrayOutputStream;
 import java.util.Date;

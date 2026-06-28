@@ -4,8 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-import com.tnf.cas.db.DummyHistFinder;
-
+import sco.server.db.DummyHistFinder;
 import sco.server.db.HistoricalFinder;
 import sco.server.security.Authenticator;
 import sco.server.security.HmacAuthenticator;

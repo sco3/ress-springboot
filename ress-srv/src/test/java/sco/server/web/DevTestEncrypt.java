@@ -1,4 +1,4 @@
-package com.tnf.cas.webserver;
+package sco.server.web;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -7,23 +7,25 @@ import java.security.Provider;
 import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.Security;
-import java.security.Signature;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
 import javax.xml.bind.DatatypeConverter;
 
 import com.google.common.base.Stopwatch;
 
-public class DevTestSignature implements Runnable {
+public class DevTestEncrypt implements Runnable {
 
     private KeyPair mPair;
     private PrivateKey mPriv;
     private PublicKey mPub;
 
     public static void main(String[] argv) throws Exception {
-        DevTestSignature sign = new DevTestSignature();
+        DevTestEncrypt sign = new DevTestEncrypt();
         sign.init();
 
         sign.run(true);
@@ -65,21 +67,33 @@ public class DevTestSignature implements Runnable {
     }
 
     private int run(boolean print) throws Exception {
+        SecretKey secret = KeyGenerator.getInstance("RC2").generateKey();
+        byte[] enc = secret.getEncoded();
 
-        Signature dsa = Signature.getInstance("SHA1withRSA");
-        dsa.initSign(mPriv);
-        String msg = "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"
-                + System.currentTimeMillis();
-        dsa.update(msg.getBytes());
-        byte[] a = dsa.sign();
+        Cipher dsa = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+        dsa.init(Cipher.ENCRYPT_MODE, mPub);
+        String msg0 = "" + Long.toHexString(System.currentTimeMillis())
+                + "asdf:asdf:asdfasdfasdfasdfasdfasdfasdfadsfasdfasdf asdfasdfasdfasdfasdf";
+        String msg = msg0.substring(0, 53);
+        // String msg2 = msg0.substring(53);
+
+        byte[] a = dsa.doFinal(msg.getBytes());
+        Cipher.getInstance("RC4");
+
         if (print) {
-            System.out.println(DatatypeConverter.printBase64Binary(a));
+            String str = DatatypeConverter.printBase64Binary(a);
+            System.out.println(a.length + ":" + str + ":" + enc.length);
+
         }
 
-        dsa.initVerify(mPub);
+        dsa.init(Cipher.DECRYPT_MODE, mPriv);
+        String msg02 = new String(dsa.doFinal(a));
+        if (!msg.equals(msg02)) {
+            System.out.println("Sorry.");
+            System.exit(0);
 
-        dsa.update(msg.getBytes());
-        dsa.verify(a);
+        }
+
         return a.length;
     }
 

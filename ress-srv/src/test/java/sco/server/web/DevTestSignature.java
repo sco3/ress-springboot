@@ -1,26 +1,29 @@
-package com.tnf.cas.webserver;
+package sco.server.web;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
+import java.security.Provider;
 import java.security.PublicKey;
 import java.security.SecureRandom;
+import java.security.Security;
+import java.security.Signature;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import javax.crypto.Cipher;
+import javax.xml.bind.DatatypeConverter;
 
 import com.google.common.base.Stopwatch;
 
-public class DevTestDh implements Runnable {
+public class DevTestSignature implements Runnable {
 
     private KeyPair mPair;
     private PrivateKey mPriv;
     private PublicKey mPub;
 
     public static void main(String[] argv) throws Exception {
-        DevTestDh sign = new DevTestDh();
+        DevTestSignature sign = new DevTestSignature();
         sign.init();
 
         sign.run(true);
@@ -44,53 +47,39 @@ public class DevTestDh implements Runnable {
 
     private void init() throws Exception {
 
-        // for (Provider provider : Security.getProviders()) {
-        // System.out.println(provider.getName());
-        // for (String key : provider.stringPropertyNames()) {
-        // // if (key.toLowerCase().indexOf("sign") >= 0) {
-        // System.out
-        // .println("\t" + key + "\t" + provider.getProperty(key));
-        // // }
-        // }
-        // }
-
-        KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DH");
+        for (Provider provider : Security.getProviders()) {
+            System.out.println(provider.getName());
+            for (String key : provider.stringPropertyNames()) {
+                // if (key.toLowerCase().indexOf("sign") >= 0) {
+                System.out
+                        .println("\t" + key + "\t" + provider.getProperty(key));
+                // }
+            }
+        }
+        KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
         SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
         keyGen.initialize(512, random);
         mPair = keyGen.generateKeyPair();
         mPriv = mPair.getPrivate();
         mPub = mPair.getPublic();
-
     }
 
     private int run(boolean print) throws Exception {
-        // SecretKey secret = KeyGenerator.getInstance("RC2").generateKey();
-        // byte[] enc = secret.getEncoded();
 
-        Cipher dsa = Cipher.getInstance("DH");
-        dsa.init(Cipher.ENCRYPT_MODE, mPub);
-        String msg0 = "" + Long.toHexString(System.currentTimeMillis())
-                + "asdf:asdf:asdfasdfasdfasdfasdfasdfasdfadsfasdfasdf asdfasdfasdfasdfasdf";
-        String msg = msg0.substring(0, 53);
-        // String msg2 = msg0.substring(53);
-
-        byte[] a = dsa.doFinal(msg.getBytes());
-        Cipher.getInstance("RC4");
-
+        Signature dsa = Signature.getInstance("SHA1withRSA");
+        dsa.initSign(mPriv);
+        String msg = "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"
+                + System.currentTimeMillis();
+        dsa.update(msg.getBytes());
+        byte[] a = dsa.sign();
         if (print) {
-            // String str = DatatypeConverter.printBase64Binary(a);
-            // System.out.println(a.length + ":" + str + ":" + enc.length);
-
+            System.out.println(DatatypeConverter.printBase64Binary(a));
         }
 
-        dsa.init(Cipher.DECRYPT_MODE, mPriv);
-        String msg02 = new String(dsa.doFinal(a));
-        if (!msg.equals(msg02)) {
-            System.out.println("Sorry.");
-            System.exit(0);
+        dsa.initVerify(mPub);
 
-        }
-
+        dsa.update(msg.getBytes());
+        dsa.verify(a);
         return a.length;
     }
 

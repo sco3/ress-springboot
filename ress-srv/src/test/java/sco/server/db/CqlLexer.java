@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.server.db;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

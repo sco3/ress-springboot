@@ -1,4 +1,4 @@
-package com.tnf.cas.db;
+package sco.server.db;
 
 import static java.lang.System.out;
 import static org.junit.Assert.assertEquals;

@@ -1,4 +1,4 @@
-package com.tnf.cas.webserver;
+package sco.server.web;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -32,12 +32,12 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.tnf.cas.db.DummyHistFinder;
-import com.tnf.cas.db.DummyImsiResolver;
-import com.tnf.cas.db.DummySubProfileGenerator;
-import com.tnf.cas.db.DummySubProfiler;
 
 import sco.server.db.DbHistoricalFinder;
+import sco.server.db.DummyHistFinder;
+import sco.server.db.DummyImsiResolver;
+import sco.server.db.DummySubProfileGenerator;
+import sco.server.db.DummySubProfiler;
 import sco.server.db.HistoricalSchemaGenerator;
 import sco.server.db.Switcher;
 import sco.server.provider.DummyHistSchemaGenerator;
