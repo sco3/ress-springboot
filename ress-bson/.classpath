@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+  <classpathentry kind="src" path="/ress-common"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.7.33/slf4j-log4j12-1.7.33.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.33/slf4j-api-1.7.33.jar"/>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/datastax/cassandra/cassandra-driver-core/3.1.0/cassandra-driver-core-3.1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-handler/4.0.37.Final/netty-handler-4.0.37.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-buffer/4.0.37.Final/netty-buffer-4.0.37.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-common/4.0.37.Final/netty-common-4.0.37.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-transport/4.0.37.Final/netty-transport-4.0.37.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty-codec/4.0.37.Final/netty-codec-4.0.37.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/guava/guava/18.0/guava-18.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/jnr/jnr-ffi/2.0.7/jnr-ffi-2.0.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/jnr/jffi/1.2.10/jffi-1.2.10.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/jnr/jffi/1.2.10/jffi-1.2.10-native.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/jnr/jnr-posix/3.0.27/jnr-posix-3.0.27.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/jnr/jnr-constants/0.9.0/jnr-constants-0.9.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/mongodb/bson/3.4.1/bson-3.4.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/de/undercouch/bson4jackson/2.5.0/bson4jackson-2.5.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.5.3/jackson-annotations-2.5.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.10/junit-4.10.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/objenesis/objenesis/2.1/objenesis-2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/powermock/powermock-api-mockito/1.6.4/powermock-api-mockito-1.6.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/powermock/powermock-api-support/1.6.4/powermock-api-support-1.6.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/powermock/powermock-core/1.6.4/powermock-core-1.6.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/powermock/powermock-reflect/1.6.4/powermock-reflect-1.6.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/powermock/powermock-module-junit4/1.6.4/powermock-module-junit4-1.6.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/powermock/powermock-module-junit4-common/1.6.4/powermock-module-junit4-common-1.6.4.jar"/>
+</classpath>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	reset="true">
+	<appender name="rolling" class="org.apache.log4j.RollingFileAppender">
+		<param name="Threshold" value="trace" />
+		<param name="File" value="./log/all.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="maxBackupIndex" value="20" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p] %t [%c{1}]: %m%n" />
+		</layout>
+	</appender>
+	<appender name="demon-rolling" class="org.apache.log4j.RollingFileAppender">
+		<param name="Threshold" value="trace" />
+		<param name="File" value="./log/main.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="maxBackupIndex" value="20" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p] %t [%c{1}]: %m%n" />
+		</layout>
+	</appender>
+	<!-- NOTE: Use this appender only for debug purposes because it is slow -->
+	<appender name="debug-demon-rolling" class="org.apache.log4j.RollingFileAppender">
+		<param name="Threshold" value="trace" />
+		<param name="File" value="./log/debug.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="maxBackupIndex" value="20" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p] %t [%c{1}]: %m (%F:%L)%n" />
+		</layout>
+	</appender>
+	<appender name="audit" class="org.apache.log4j.RollingFileAppender">
+		<param name="Threshold" value="trace" />
+		<param name="File" value="./log/audit.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="maxBackupIndex" value="20" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%m%n" />
+		</layout>
+	</appender>
+	<appender name="constat" class="org.apache.log4j.RollingFileAppender">
+		<param name="Threshold" value="trace" />
+		<param name="File" value="./log/constat.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="maxBackupIndex" value="20" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%m%n" />
+		</layout>
+	</appender>
+	<logger name="audit" additivity="false">
+		<level value="info" />
+		<appender-ref ref="audit" />
+	</logger>
+	<logger name="constat" additivity="false">
+		<level value="info" />
+		<appender-ref ref="constat" />
+	</logger>
+	<!-- 
+	<logger name="com.tnf" additivity="false" > 
+	    <level value="debug"/> 
+	    <appender-ref ref="debug-demon-rolling"/> 
+	</logger>
+	-->
+	<logger name="com.tnf" additivity="false" >
+		<level value="info" />
+		<appender-ref ref="demon-rolling" />
+	</logger>
+	
+	<root>
+		<level value="info" />
+		<appender-ref ref="rolling" />
+	</root>
+</log4j:configuration>
