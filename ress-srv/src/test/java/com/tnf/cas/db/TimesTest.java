@@ -1,15 +1,15 @@
 package com.tnf.cas.db;
 
-import static com.tnf.cas.db.TimeSniper.getDates;
 import static java.lang.System.out;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static sco.server.db.TimeSniper.getDates;
 
 import java.util.SortedSet;
 
 import org.junit.Test;
 
-import sco.provider.BadParameters;
+import sco.server.provider.BadParameters;
 
 public class TimesTest {
 

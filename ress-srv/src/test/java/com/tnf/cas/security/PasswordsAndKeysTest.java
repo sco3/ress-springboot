@@ -20,13 +20,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.datastax.driver.core.ConsistencyLevel;
 import com.tnf.cas.db.DummyHistFinder;
-import com.tnf.cas.db.HistoricalFinder;
 
-import sco.security.HmacAuthenticator;
-import sco.security.KeyProvider;
-import sco.security.PasswordFileLoginProvider;
-import sco.security.PropsFileUserStorage;
-import sco.web.WebServerConstants;
+import sco.server.db.HistoricalFinder;
+import sco.server.security.HmacAuthenticator;
+import sco.server.security.KeyProvider;
+import sco.server.security.PasswordFileLoginProvider;
+import sco.server.security.PropsFileUserStorage;
+import sco.server.web.WebServerConstants;
 import test.spring.non.scannable.SecurityTestCfg;
 
 public class PasswordsAndKeysTest implements WebServerConstants {

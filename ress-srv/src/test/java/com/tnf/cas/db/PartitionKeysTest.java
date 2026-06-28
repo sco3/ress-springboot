@@ -11,6 +11,8 @@ import java.util.Set;
 import org.junit.Test;
 
 import junit.framework.Assert;
+import sco.server.db.DbHistoricalFinder;
+import sco.server.db.PartToken;
 
 public class PartitionKeysTest {
 

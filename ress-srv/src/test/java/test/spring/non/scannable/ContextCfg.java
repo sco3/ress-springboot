@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(TestMockBeansConfig.class)
-@ComponentScan(basePackages = {"com.tnf.cas", "sco.provider", "sco.server", "sco.security"})
+@ComponentScan(basePackages = {"sco.server"})
 public class ContextCfg {
 
 }

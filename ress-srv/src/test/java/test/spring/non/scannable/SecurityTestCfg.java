@@ -5,13 +5,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 import com.tnf.cas.db.DummyHistFinder;
-import com.tnf.cas.db.HistoricalFinder;
 
-import sco.security.Authenticator;
-import sco.security.HmacAuthenticator;
-import sco.security.KeyProvider;
-import sco.security.PasswordFileLoginProvider;
-import sco.security.SingleKeyProvider;
+import sco.server.db.HistoricalFinder;
+import sco.server.security.Authenticator;
+import sco.server.security.HmacAuthenticator;
+import sco.server.security.KeyProvider;
+import sco.server.security.PasswordFileLoginProvider;
+import sco.server.security.SingleKeyProvider;
 
 @Configuration
 @PropertySource("classpath:webroot.properties")

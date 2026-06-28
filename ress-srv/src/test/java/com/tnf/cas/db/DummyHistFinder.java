@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Value;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
-import sco.provider.NoDataFound;
+import sco.server.db.DbHistoricalFinder;
+import sco.server.db.HistoricalFinder;
+import sco.server.provider.NoDataFound;
 
 import com.datastax.driver.core.ConsistencyLevel;
 

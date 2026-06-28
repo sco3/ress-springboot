@@ -3,6 +3,9 @@ package com.tnf.cas.db;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import sco.server.db.DbSubProfileShemaGenerator;
+import sco.server.db.ProfileSchemaGenerator;
+
 public class DummySubProfileGenerator extends DbSubProfileShemaGenerator
         implements ProfileSchemaGenerator {
 

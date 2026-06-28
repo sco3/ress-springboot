@@ -12,13 +12,13 @@ import com.tnf.cas.db.DummyHistFinder;
 import com.tnf.cas.db.DummyImsiResolver;
 import com.tnf.cas.db.DummySubProfileGenerator;
 import com.tnf.cas.db.DummySubProfiler;
-import com.tnf.cas.db.HistoricalFinder;
-import com.tnf.cas.db.HistoricalSchemaGenerator;
-import com.tnf.cas.db.ImsiResolver;
-import com.tnf.cas.db.ProfileSchemaGenerator;
-import com.tnf.cas.db.SubProfiler;
 
-import sco.provider.DummyHistSchemaGenerator;
+import sco.server.db.HistoricalFinder;
+import sco.server.db.HistoricalSchemaGenerator;
+import sco.server.db.ImsiResolver;
+import sco.server.db.ProfileSchemaGenerator;
+import sco.server.db.SubProfiler;
+import sco.server.provider.DummyHistSchemaGenerator;
 
 @Configuration
 @PropertySource({

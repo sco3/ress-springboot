@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import sco.server.db.ImsiResolver;
 import test.spring.non.scannable.TestMockBeansConfig;
 
 public class TestContextCreationForTests {

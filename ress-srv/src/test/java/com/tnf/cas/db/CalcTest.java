@@ -1,5 +1,7 @@
 package com.tnf.cas.db;
 
+import sco.server.db.PartKeyCalculator;
+
 public class CalcTest implements PartKeyCalculator {
 
     @Override

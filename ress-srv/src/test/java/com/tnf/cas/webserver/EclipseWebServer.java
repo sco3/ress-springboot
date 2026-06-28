@@ -11,8 +11,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import sco.server.WebServer;
-import sco.web.WebServerConstants;
+import sco.server.web.WebServer;
+import sco.server.web.WebServerConstants;
 import test.spring.non.scannable.EclipseContextCfg;
 
 public class EclipseWebServer implements WebServerConstants {

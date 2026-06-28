@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import sco.server.db.ImsiResolver;
+import sco.server.db.MsisdnSearchResult;
+
 public class DummyImsiResolver implements ImsiResolver {
 
     private static final String COMMA = Pattern.quote(",");

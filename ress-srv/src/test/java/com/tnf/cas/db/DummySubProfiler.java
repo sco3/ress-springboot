@@ -8,6 +8,9 @@ import java.util.Set;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import sco.server.db.DbSubProfiler;
+import sco.server.db.SubProfiler;
+
 public class DummySubProfiler extends DbSubProfiler implements SubProfiler {
 	static final String JSON = ("" //
 			+ "[{'imsi': 'imsi2-1', 'address': '21', 'age': null, 'current_plan': null, 'name': 'two'},"

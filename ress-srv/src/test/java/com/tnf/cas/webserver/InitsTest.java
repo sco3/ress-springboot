@@ -1,13 +1,13 @@
 package com.tnf.cas.webserver;
 
 import static org.junit.Assert.*;
-import static sco.server.WebInitiator.scramble;
+import static sco.server.web.WebInitiator.scramble;
 
 import java.util.regex.Pattern;
 
 import org.junit.Test;
 
-import sco.server.WebInitiator;
+import sco.server.web.WebInitiator;
 
 public class InitsTest {
 
