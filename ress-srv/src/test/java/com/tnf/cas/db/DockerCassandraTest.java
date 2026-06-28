@@ -55,11 +55,11 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
-import com.tnf.cas.provider.BadParameters;
 
 import sco.common.db.BlobberRegistry;
 import sco.common.properties.Dt;
 import sco.common.properties.Sgm;
+import sco.provider.BadParameters;
 
 import org.testcontainers.containers.CassandraContainer;
 

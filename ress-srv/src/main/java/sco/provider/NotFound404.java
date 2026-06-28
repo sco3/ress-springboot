@@ -1,4 +1,4 @@
-package com.tnf.cas.provider;
+package sco.provider;
 
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.core.MediaType;
@@ -9,7 +9,7 @@ import javax.ws.rs.ext.Provider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.tnf.cas.provider.ExceptionHandler.Status;
+import sco.provider.ExceptionHandler.Status;
 
 @Provider
 public class NotFound404 implements ExceptionMapper<NotFoundException> {

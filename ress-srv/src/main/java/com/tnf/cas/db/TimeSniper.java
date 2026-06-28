@@ -5,7 +5,7 @@ import static sco.common.partition.CommonBaseShiftTime.shiftTime;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import com.tnf.cas.provider.BadParameters;
+import sco.provider.BadParameters;
 
 public class TimeSniper {
 	public static final String WRONG_TIME_PERIOD = "Wrong Time Period";

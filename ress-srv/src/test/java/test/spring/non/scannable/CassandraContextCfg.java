@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
         "classpath:embedded_cassandra_connection.properties",
         "file:src/main/assembly/cfg/cfg-cas.properties.template"
 }, ignoreResourceNotFound = true)
-@ComponentScan(basePackages = {"com.tnf.cas", "sco.security"}, excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = EnableAutoConfiguration.class))
+@ComponentScan(basePackages = {"com.tnf.cas", "sco.provider", "sco.security"}, excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = EnableAutoConfiguration.class))
 @EnableAutoConfiguration(exclude = {org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration.class})
 public class CassandraContextCfg {
 

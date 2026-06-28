@@ -9,7 +9,8 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.tnf.cas.provider.StatusFilter;
+
+import sco.provider.StatusFilter;
 
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {

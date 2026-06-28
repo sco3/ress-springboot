@@ -1,4 +1,4 @@
-package com.tnf.cas.provider;
+package sco.provider;
 
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.core.MediaType;

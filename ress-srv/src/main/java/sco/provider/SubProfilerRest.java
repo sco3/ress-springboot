@@ -1,4 +1,4 @@
-package com.tnf.cas.provider;
+package sco.provider;
 
 import java.util.Set;
 

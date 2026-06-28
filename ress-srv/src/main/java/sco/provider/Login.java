@@ -1,4 +1,4 @@
-package com.tnf.cas.provider;
+package sco.provider;
 
 import javax.annotation.security.PermitAll;
 import javax.ws.rs.GET;

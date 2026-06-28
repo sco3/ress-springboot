@@ -9,7 +9,7 @@ import java.util.SortedSet;
 
 import org.junit.Test;
 
-import com.tnf.cas.provider.BadParameters;
+import sco.provider.BadParameters;
 
 public class TimesTest {
 

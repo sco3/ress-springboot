@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.tnf.cas.provider.NoDataFound;
+
+import sco.provider.NoDataFound;
 
 import com.datastax.driver.core.ConsistencyLevel;
 

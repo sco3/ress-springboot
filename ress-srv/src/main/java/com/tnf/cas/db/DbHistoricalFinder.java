@@ -44,10 +44,10 @@ import com.datastax.driver.core.querybuilder.Select.Where;
 import com.datastax.driver.core.utils.Bytes;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
-import com.tnf.cas.provider.BadParameters;
-import com.tnf.cas.provider.NoDataFound;
 
 import sco.common.db.BlobberRegistry;
+import sco.provider.BadParameters;
+import sco.provider.NoDataFound;
 
 /**
  * 

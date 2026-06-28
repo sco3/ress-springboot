@@ -12,7 +12,7 @@ import org.springframework.core.io.FileSystemResource;
 @ImportResource({
         "file:src/main/assembly/cfg/beans.xml"
 })
-@ComponentScan(basePackages = {"com.tnf.cas", "sco.security"})
+@ComponentScan(basePackages = {"com.tnf.cas", "sco.provider", "sco.security"})
 public class EclipseContextCfg {
 
     @Bean

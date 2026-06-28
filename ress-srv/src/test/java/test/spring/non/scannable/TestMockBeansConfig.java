@@ -17,7 +17,8 @@ import com.tnf.cas.db.HistoricalSchemaGenerator;
 import com.tnf.cas.db.ImsiResolver;
 import com.tnf.cas.db.ProfileSchemaGenerator;
 import com.tnf.cas.db.SubProfiler;
-import com.tnf.cas.provider.DummyHistSchemaGenerator;
+
+import sco.provider.DummyHistSchemaGenerator;
 
 @Configuration
 @PropertySource({
