@@ -1,4 +1,4 @@
-package com.tnf.bis.common.util;
+package sco.common.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

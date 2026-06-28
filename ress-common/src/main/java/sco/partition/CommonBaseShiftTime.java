@@ -4,7 +4,8 @@ import java.text.ParseException;
 
 import com.tnf.bis.common.timeinterval.BaseTimeGranularity;
 import com.tnf.bis.common.timeinterval.TimeInterval;
-import com.tnf.bis.common.util.TimeHelper;
+
+import sco.common.util.TimeHelper;
 
 public class CommonBaseShiftTime {
 
