@@ -7,8 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.io.ClassPathResource;
 
-import com.tnf.bis.common.util.BisPropertiesHelper;
-
+import sco.common.properties.BisPropertiesHelper;
 import sco.common.util.CasPropertiesHelper;
 
 @Configuration

@@ -1,4 +1,4 @@
-package com.tnf.bis.common.util;
+package sco.common.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

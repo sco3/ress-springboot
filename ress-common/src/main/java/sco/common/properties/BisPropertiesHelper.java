@@ -1,4 +1,4 @@
-package com.tnf.bis.common.util;
+package sco.common.properties;
 
 public class BisPropertiesHelper {
 

@@ -28,10 +28,10 @@ import com.datastax.driver.core.Session;
 import com.datastax.driver.core.SimpleStatement;
 import com.datastax.driver.core.SocketOptions;
 import com.datastax.driver.core.Statement;
-import com.tnf.bis.common.util.CassandraHelper;
 
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.SslProvider;
+import sco.common.util.CassandraHelper;
 
 public class CassandraDatasourceFactory {
 
