@@ -12,7 +12,8 @@ import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
-import com.tnf.bis.common.db.CassandraDatasourceFactory;
+
+import sco.common.db.CassandraDatasourceFactory;
 
 public class DevTestCassandraDatasourceFactory {
     private static Properties connectionProperties;

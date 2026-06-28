@@ -11,10 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.datastax.driver.core.Cluster;
-import com.tnf.bis.common.db.CassandraDatasourceFactory;
 import com.tnf.cas.web.WebServerConstants;
 import com.tnf.cas.webserver.WebServer;
 
+import sco.common.db.CassandraDatasourceFactory;
 import sco.common.properties.BisPropertiesHelper;
 import sco.common.properties.Dt;
 import sco.common.properties.Sgm;

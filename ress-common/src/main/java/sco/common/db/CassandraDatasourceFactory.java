@@ -1,4 +1,4 @@
-package com.tnf.bis.common.db;
+package sco.common.db;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

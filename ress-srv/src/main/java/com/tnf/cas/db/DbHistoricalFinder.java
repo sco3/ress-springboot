@@ -4,8 +4,8 @@ import static com.datastax.driver.core.querybuilder.QueryBuilder.eq;
 import static com.datastax.driver.core.querybuilder.QueryBuilder.gte;
 import static com.datastax.driver.core.querybuilder.QueryBuilder.in;
 import static com.datastax.driver.core.querybuilder.QueryBuilder.lt;
-import static com.tnf.bis.common.db.CassandraDatasourceFactory.CASSANDRA_KEYSPACE;
 import static com.tnf.cas.db.TimeSniper.getDates;
+import static sco.common.db.CassandraDatasourceFactory.CASSANDRA_KEYSPACE;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;

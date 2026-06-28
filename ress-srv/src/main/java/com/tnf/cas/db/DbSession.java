@@ -1,11 +1,11 @@
 package com.tnf.cas.db;
 
-import static com.tnf.bis.common.db.CassandraDatasourceFactory.CASSANDRA_HOSTS_COMMA_SEPARATED;
-import static com.tnf.bis.common.db.CassandraDatasourceFactory.CASSANDRA_KEYSPACE;
-import static com.tnf.bis.common.db.CassandraDatasourceFactory.CASSANDRA_PORT;
-import static com.tnf.bis.common.db.CassandraDatasourceFactory.CREATE_KEYSPACE_CQL_PROPERTY_NAME;
-import static com.tnf.bis.common.db.CassandraDatasourceFactory.PASSWORD_PROPERTY_NAME;
-import static com.tnf.bis.common.db.CassandraDatasourceFactory.USER_PROPERTY_NAME;
+import static sco.common.db.CassandraDatasourceFactory.CASSANDRA_HOSTS_COMMA_SEPARATED;
+import static sco.common.db.CassandraDatasourceFactory.CASSANDRA_KEYSPACE;
+import static sco.common.db.CassandraDatasourceFactory.CASSANDRA_PORT;
+import static sco.common.db.CassandraDatasourceFactory.CREATE_KEYSPACE_CQL_PROPERTY_NAME;
+import static sco.common.db.CassandraDatasourceFactory.PASSWORD_PROPERTY_NAME;
+import static sco.common.db.CassandraDatasourceFactory.USER_PROPERTY_NAME;
 
 import java.util.Properties;
 
@@ -18,9 +18,9 @@ import org.springframework.stereotype.Component;
 
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.exceptions.NoHostAvailableException;
-import com.tnf.bis.common.db.CassandraDatasourceFactory;
 import com.tnf.cas.web.WebServerConstants;
 
+import sco.common.db.CassandraDatasourceFactory;
 import sco.common.util.CasPropertiesHelper;
 
 @Component
