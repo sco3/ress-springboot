@@ -11,7 +11,7 @@ import java.util.zip.CRC32;
  */
 
 public class CommonBaseSgm {
-    protected static int base = Integer.MIN_VALUE;
+    protected static int base = 10;
 
     public static void setBase(int aBase) {
         base = aBase;

@@ -7,6 +7,10 @@ services:
       - "9042:9042"
     environment:
       - CASSANDRA_CLUSTER_NAME=TestCluster
+    volumes:
+      - ./docker/init.cql:/init.cql
+      - ./docker/cassandra-entrypoint.sh:/custom-entrypoint.sh
+    entrypoint: ["/custom-entrypoint.sh"]
     healthcheck:
       test: ["CMD-SHELL", "cqlsh -e 'describe cluster' || exit 1"]
       interval: 10s
@@ -23,6 +27,8 @@ services:
       - cassandra.hosts.comma.separated=cassandra
       - cassandra.port=9042
       - cassandra.keyspace=tnf
+      - cassandra.user=cassandra
+      - cassandra.password=cassandra
       - db.user=cassandra
       - db.password=cassandra
     depends_on:
