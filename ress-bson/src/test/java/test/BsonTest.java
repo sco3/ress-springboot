@@ -5,7 +5,6 @@ import static test.Hex.decode;
 import static test.Hex.encode;
 
 import java.util.HashMap;
-
 import java.util.Iterator;
 import java.util.ServiceLoader;
 
@@ -20,7 +19,6 @@ import de.undercouch.bson4jackson.BsonFactory;
 import de.undercouch.bson4jackson.BsonModule;
 import sco.common.db.Blobber;
 import sco.common.db.BlobberRegistry;
-import com.google.common.io.BaseEncoding;
 
 public class BsonTest {
 
