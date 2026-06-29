@@ -259,16 +259,11 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
               <includes>
-                <include>**/DockerComposeIntegrationTest.java</include>
+                <include>**/DockerComposeIntegrationCheck.java</include>
               </includes>
               <forkCount>1</forkCount>
               <reuseForks>false</reuseForks>
-              <argLine>
-                --add-opens java.base/java.lang=ALL-UNNAMED
-                --add-opens java.base/java.lang.reflect=ALL-UNNAMED
-                --add-opens java.base/java.util=ALL-UNNAMED
-                --add-opens java.base/java.lang.invoke=ALL-UNNAMED
-              </argLine>
+              <argLine>${surefire.opens}</argLine>
               <systemPropertyVariables>
                 <cassandra.hosts.comma.separated>127.0.0.1</cassandra.hosts.comma.separated>
                 <cassandra.port>9042</cassandra.port>
