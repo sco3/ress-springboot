@@ -24,7 +24,7 @@ jobs:
           cache: maven
 
       - name: Build Maven project
-        run: mvn clean package -DskipTests -q
+        run: mvn clean install -DskipTests -q
 
       - name: Build Docker image
         run: docker build -t ress-srv:latest .
