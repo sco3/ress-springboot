@@ -27,6 +27,7 @@
     <jackson.version>2.8.11</jackson.version>
     <curator.verison>2.7.1</curator.verison>
     <netty.version>4.1.17.Final</netty.version>
+    <surefire.opens/>
   </properties>
   <build>
     <plugins>
@@ -121,12 +122,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.1.2</version>
           <configuration>
-            <argLine>
-              --add-opens java.base/java.lang=ALL-UNNAMED
-              --add-opens java.base/java.lang.reflect=ALL-UNNAMED
-              --add-opens java.base/java.util=ALL-UNNAMED
-              --add-opens java.base/java.lang.invoke=ALL-UNNAMED
-            </argLine>
+            <argLine>${surefire.opens}</argLine>
             <systemPropertyVariables>
               <org.testcontainers.dockerclient.tcp.connection>unix:///var/run/docker.sock</org.testcontainers.dockerclient.tcp.connection>
             </systemPropertyVariables>
@@ -299,4 +295,15 @@
 
     </dependencies>
   </dependencyManagement>
+  <profiles>
+    <profile>
+      <id>jdk9+</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <surefire.opens>--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED</surefire.opens>
+      </properties>
+    </profile>
+  </profiles>
 </project>
